@@ -3,9 +3,11 @@
 - create React App
 - configured Tailwind CSS
 - header
-
+- routing of App
 - Login form
--Sign up form
+- Sign up form
+- Form Validation
+- useRef Hook
     
 
 
@@ -14,7 +16,7 @@
     - signin/signup form
     -redirect to browse page
 
-- browse(after auhhentication)
+- browse(after authentication)
     - header
     - main movie
         - trailer in background
