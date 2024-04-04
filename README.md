@@ -17,5 +17,5 @@
             - Movie List * N
 
 - Netflix - Gpt
-    - search bar
+    - Search Bar
     - moviw suggestion# Netflix-Gpt
