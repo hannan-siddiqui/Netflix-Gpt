@@ -15,6 +15,7 @@
 - Created Redux Store with userSlice 
 - Implemented Sign Out
 - Update profile
+- Bug fix - if user is not logged in redirect "/browse" to Login Page and vice versa
 
 
 # features
