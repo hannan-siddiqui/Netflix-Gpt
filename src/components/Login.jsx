@@ -15,7 +15,7 @@ const Login = () => {
   const [errorMessage, seterrorMessage] = useState(null)
   const navigate = useNavigate();
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   
 
