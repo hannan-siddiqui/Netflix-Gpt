@@ -13,7 +13,7 @@ const usePopularMovies = () => {
          API_OPTIONS);
         
          const json = await response.json();
-        console.log(json.results);
+     
         
 
         // updating redux store

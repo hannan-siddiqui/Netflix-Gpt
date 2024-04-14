@@ -6,6 +6,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { bg_Imgage } from "../utils/constant";
                        
 
 
@@ -92,7 +93,7 @@ const Login = () => {
         // signedin
       const user = userCredential.user;
       navigate("/browse");
-      console.log(user);
+      
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -108,8 +109,9 @@ const Login = () => {
 
     <div  >
       <Header/>
-      <div className="absolute">
-      <img src="https://i.redd.it/zjgs096khv591.jpg" alt="" />
+
+      <div className="absolute my-20">
+      <img src={bg_Imgage} alt="" />
       </div>
 
       <form 

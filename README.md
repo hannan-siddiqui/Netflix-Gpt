@@ -26,6 +26,10 @@
 - build SecondaryContainer
 - build MovieList
 - build MovieCard
+- Gpt search feature
+- gpt search page
+- gpt search bar
+- **** Multi-Language feature 
 
 # features
 - Login/SignUp form
