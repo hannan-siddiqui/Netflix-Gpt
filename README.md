@@ -24,7 +24,8 @@
 - added trailer on main container
 - embeded movieTrailer and make it autoplay
 - build SecondaryContainer
-
+- build MovieList
+- build MovieCard
 
 # features
 - Login/SignUp form
