@@ -5,7 +5,7 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxOThhYzgyMDZjZGVkOTcxYzg0MDcxYmI1Mjk5NTQ3NyIsInN1YiI6IjY2MTkyODI3M2FjZDIwMDE3YzQ2ZmYxOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8VfZ2Lcd3zx3O8r9ZOQM1Z4Eq7KO_H_6IgbG7xjyp8w'
+      Authorization: "Bearer" +process.env.REACT_APP_TMDB_KEY, 
     }
   };
 
@@ -15,3 +15,5 @@ export const bg_Imgage = "https://i.redd.it/zjgs096khv591.jpg";
 
 export const SupportedLanguages = [{indentifier:"en", name:"English"}, 
                                    {indentifier:"spanish", name:"Spanish"}]
+
+export const OpenAI_Key = process.env.REACT_APP_OpenAI_Key;

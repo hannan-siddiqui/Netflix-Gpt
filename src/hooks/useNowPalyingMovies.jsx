@@ -1,10 +1,12 @@
 import { API_OPTIONS } from "../utils/constant";
 import { addNowPalyingMovie } from "../utils/moviesSlice";
-import { useDispatch, } from "react-redux";
+import { useDispatch, useSelector, } from "react-redux";
 import { useEffect } from "react";
 
 const useNowPalyingMovies = () => {
 
+
+    const movies = useSelector(store=>store.movies.nowPlayingMovies);
 
     const dispatch = useDispatch()
 
@@ -19,7 +21,10 @@ const useNowPalyingMovies = () => {
       }
     
     useEffect(()=>{
-      nowPlayingMovies();
+// memoization 
+
+      !movies &&nowPlayingMovies();
+
     }, [])
 
 
