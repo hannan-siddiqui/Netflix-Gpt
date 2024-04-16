@@ -11,7 +11,7 @@ const useNowPalyingMovies = () => {
     const dispatch = useDispatch()
 
     const nowPlayingMovies = async () => {
-        const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=<KEY>', API_OPTIONS);
+        const response = await fetch('https://api.themoviedb.org/3/movie/now_playing', API_OPTIONS);
         const json = await response.json();
         
 
@@ -23,7 +23,7 @@ const useNowPalyingMovies = () => {
     useEffect(()=>{
 // memoization 
 
-      !movies &&nowPlayingMovies();
+     !movies && nowPlayingMovies();
 
     }, [])
 

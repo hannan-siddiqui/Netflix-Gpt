@@ -30,6 +30,11 @@
 - gpt search page
 - gpt search bar
 - **** Multi-Language feature 
+- get Open AI api key
+- gpt search api call
+- fetch movie from TMBD data
+- created gptSlice added data
+-  
 
 # features
 - Login/SignUp form

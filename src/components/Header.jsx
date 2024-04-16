@@ -35,7 +35,7 @@ const Header = () => {
       navigate("/error");
     });
     
-    
+  
   }
 
   useEffect(()=>{
@@ -69,27 +69,27 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute w-screen  px-40  z-10 flex items-center justify-between">
+    <div className="absolute w-screen md:px-20 z-10 flex flex-col md:flex-row  items-center justify-between">
       <img 
-      className="w-48"
+      className="w-60 aspect-auto mx-auto md:mx-0"
       src={logo_URL} alt="404 error" />
       
-       {user && <div className='flex items-center justify-center' >
+       {user && <div className=' mt-10 flex items-center  justify-center' >
 
 {/* change language  */}
        
-      <div>
+      <div className=''>
       {showSearch &&
        (<select 
         onChange={changeLang}
-        className='bg-red-600 font-bold p-2 rounded-lg mr-10 w-32 h-15'
+        className='bg-red-600 font-bold p-2 rounded-lg mr-10 w-22 md:w32 h-15'
         >
          
 
           {SupportedLanguages.map(lang => 
-              <option
+              <option 
               key={lang.indentifier} value={lang.indentifier}
-              className='bg-red-600 font-bold p-2 rounded-lg h-15'
+              className='bg-red-600 font-bold  p-2 rounded-lg h-15'
               > 
               {lang.name}
                </option>
@@ -102,15 +102,15 @@ const Header = () => {
 
         <button 
         onClick={handleGptSearch}
-        className='bg-red-600 p-2 rounded-lg mr-10 w-30 h-15'>
-          {showSearch?"Home Page":" Gpt Search" }
+        className='bg-red-600 p-2 rounded-lg mr-3 font-bold w-30 md:w-40 h-15'>
+          {showSearch?"Home":"Search" }
         </button>
 
-        <img className='w-12 h-15 ' src={user?.photoURL} alt="" />
+        <img className='w-12 h-12 ' src={user?.photoURL} alt="" />
         
         <button
         onClick={handleSignOut}
-        className="bg-red-600 text-white p-2 rounded-lg mx-6 w-30 h-15">Sign-Out
+        className="bg-red-600 text-black p-2 font-bold rounded-lg ml-2  w-30 h-15">Sign-Out
         </button>
 
       </div>}

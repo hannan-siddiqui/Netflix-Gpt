@@ -18,9 +18,9 @@ const GptMovieSuggestion = () => {
 
 
   return (
-    <div className="m-4 p-8 bg-black bg-opacity-80 rounded-xl">
+    <div className="mt-10 m-4 p-8 bg-black bg-opacity-80 rounded-xl">
         
-        <div className="border-[3px] border-red-600  pt-4 flex ">
+        <div className="border-[3px] border-red-600  pt-4 flex flex-col md:flex-row ">
         
             <div className="flex ">
               <div className="w-1/2">
@@ -32,7 +32,7 @@ const GptMovieSuggestion = () => {
                   </div>
                   <div className="ml-6 rounded-full font-bold bg-orange-200 text-red-500  h-30 w-20 p-4 flex items-center justify-center">
                     
-                    <h1 className="text-lg flex items-center justify-center ">rating {vote_average}/10</h1>
+                    <h1 className="text-lg flex items-center justify-center ">rating {vote_average}</h1>
                   </div>
                 
                 </div>

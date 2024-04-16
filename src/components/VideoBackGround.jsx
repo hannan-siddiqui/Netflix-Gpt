@@ -13,14 +13,14 @@ const VideoBackGround = ({movieId}) => {
     
 
   return (
-    <div className=" w-screen ">
+    <div className="w-screen pt-[30%] md:pt-0">
      
         <iframe
-         className="aspect-video w-screen h-screen "
+         className="aspect-video w-screen md:h-screen  p-2"
          width="560" height="315" src={"https://www.youtube.com/embed/" + trailerVid?.key 
         + "?autoplay=1&mute=1"
         } 
-         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
     </div>
   )

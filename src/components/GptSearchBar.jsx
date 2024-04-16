@@ -3,23 +3,23 @@ import lang from "../utils/languageConstant";
 import { useRef } from "react";
 import { API_OPTIONS } from "../utils/constant";
 import { addGptMovies } from "../utils/gptSlice";
-// import openai from "../utils/openAI";
+
 
 const GptSearchBar = () => {
     
   const dispatch = useDispatch();
 
     const langkey = useSelector(store=>store.config.lang);
-    const m = useSelector(store=>store.gpt.gptMovies);
+    
 
 
     const searchText = useRef(null)
 
     const fetchMovie = async (movie)=>{
-      const data = await fetch("https://api.themoviedb.org/3/search/movie?query="+movie+"&include_adult=false&language=en-US&page=1", API_OPTIONS);
+      const data = await fetch("https://api.themoviedb.org/3/search/movie?query=" +movie+"&include_adult=false&language=en-US&page=1", API_OPTIONS);
 
       const json = await data.json();
-      // console.log(json.results[0]);
+  
 
       return json.results[0];
 
@@ -31,7 +31,7 @@ const GptSearchBar = () => {
 
         // calling fetchMovie()
 
-        // fetchMovie(Text);
+      //  const tmdbResult =  fetchMovie(Text);
         
         // const query = "give me names of five movies comma separated which is" + Text; 
         
@@ -74,17 +74,17 @@ const GptSearchBar = () => {
    
 
   return (
-    <div className="pt-[6%] flex  justify-center">
-        <form  className=" w-1/2 p-2 bg-black grid grid-cols-12" onSubmit={(e)=>e.preventDefault()}>
+    <div className="mt-16 md:mt-0 flex justify-center ">
+        <form  className=" h-40 items-center p-4 border-[3px] border-red-600 rounded-xl md:w-1/2  bg-black md:grid grid-cols-12 justify-center flex mt-16" onSubmit={(e)=>e.preventDefault()}>
 
             <input
             ref={searchText}
-            className="text-lg col-span-8 mr-3  px-2  h-15 placeholder-red-500 font-bold text-red-500 placeholder:font-bold "
+            className=" text-lg w-[90] md:col-span-8 mr-3  px-2 h-10 rounded-lg md:h-15 placeholder-red-500 font-bold text-red-500 placeholder:font-bold "
             type="text" placeholder= {lang[langkey].gptSearchPlaceHolder} />
 
             <button
             onClick={handelGptSearchClick}
-            className="font-bold text-lg col-span-4 bg-red-600 p-2 rounded-lg "> {lang[langkey].search} </button>
+            className="md:w-50 font-bold text-lg col-span-4 bg-red-600 p-2 rounded-lg "> {lang[langkey].search} </button>
             
         </form>
     </div>

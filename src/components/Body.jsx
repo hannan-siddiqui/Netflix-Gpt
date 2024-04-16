@@ -18,7 +18,9 @@ const Body = () => {
         {
             path:"/browse",
             element:<Browse/>,
-        }
+        },
+
+        
     ]);
 
 
@@ -29,7 +31,6 @@ const Body = () => {
         <div>
 
           <RouterProvider router={appRouter}/>
-
         
         </div>
   )

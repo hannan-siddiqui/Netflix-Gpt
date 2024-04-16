@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 const useTopRatedMovies = () => {
     const movies = useSelector(store=>store.movies.topRatedMovies);
+
     const dispatch = useDispatch()
 
     const getTop = async () => {
@@ -21,7 +22,7 @@ const useTopRatedMovies = () => {
       }
     
     useEffect(()=>{
-        !movies && getTop();
+       !movies &&  getTop();
     }, [])
   
 }

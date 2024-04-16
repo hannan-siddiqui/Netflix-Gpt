@@ -1,18 +1,24 @@
-import { bg_Imgage, logo_URL } from "../utils/constant"
+import { bg_Imgage} from "../utils/constant"
 import GptMovieSuggestion from "./GptMovieSuggestion"
 import GptSearchBar from "./GptSearchBar"
 
 const GptSearch = () => {
   return (
-    <div>
+    
+      <>
 
-        <div className="absolute -z-10">
-        <img src={bg_Imgage} alt="" />
+        <div className="absolute -z-10 ">
+          <img
+          className="h-screen object-cover"
+          src={bg_Imgage} alt="" />
         </div>
 
-        <GptSearchBar/>
-        <GptMovieSuggestion/>
-    </div>
+        <div className="pt-[20%]" >
+          <GptSearchBar/>
+          <GptMovieSuggestion/>
+      </div>
+
+    </>
   )
 }
 
