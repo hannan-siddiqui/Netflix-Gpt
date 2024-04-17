@@ -8,12 +8,11 @@ const GptMovieSuggestion = () => {
 
   if(!gptMovieName) return null
 
-  console.log(gptMovies);
-  console.log(gptMovieName);
+  
 
 
   const {original_title, overview, popularity, poster_path, release_date, vote_average } = gptMovies[0];
-  console.log(original_title);
+  
 
 
 

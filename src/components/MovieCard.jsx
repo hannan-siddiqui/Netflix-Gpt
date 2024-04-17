@@ -1,6 +1,6 @@
 import { IMG_CDN_URL } from "../utils/constant";
 
-const MovieCard = ({posterPath}) => {
+const MovieCard = ({posterPath, id}) => {
 
   return (
     <div className="w-56 pr-4">
